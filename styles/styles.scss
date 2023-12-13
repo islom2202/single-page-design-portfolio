@@ -1,0 +1,9 @@
+@use "./breakpoints";
+@use"./boilerplates";
+
+.prev, .next{
+  opacity: 0;
+}
+.parent:hover :where(.prev, .next){
+  opacity: 1;
+}
