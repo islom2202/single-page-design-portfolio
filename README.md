@@ -19,7 +19,7 @@ Small features that I've learned alongside building project
         background-color: rgb(0, 0, 0 / 0.3);
       }
       ```
-  2. **':target'** - pseudo-class in CSS that helps us to style active ``id-link``. And it might be very useful tool even for native-routing😎: <br>
+  2. **':target'** - pseudo-class in CSS that helps us to style active ``id-link``: <br>
      - html:
       ~~~
       <body>
@@ -40,10 +40,16 @@ Small features that I've learned alongside building project
       ~~~
       - css:
       ~~~
-      article{
-      display: none;
-      }
-      article:target{
-      display: block;
+      article:not(article:target){
+       display: none;
       }
       ~~~
+  3. **scroll-padding-inline** -  property allows you to define the amount of padding that should be applied before the beginning and after the end of the scrollable content:
+      ~~~
+      .container {
+          overflow-x: auto;
+          scroll-padding-inline: 20px;
+      }
+      ~~~
+  4. **:has()** - pseudo-class in CSS is a relatively new feature that allows developers to select elements based on their children
+  5. **:has(:not())** - it is the opposite of ``:has`` pseudo-class.

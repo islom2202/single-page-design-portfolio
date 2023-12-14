@@ -7,9 +7,5 @@
 .parent:hover :where(.prev, .next){
   opacity: 1;
 }
-article{
-  display: none;
-}
-article:target{
-  display: block;
-}
+
+
