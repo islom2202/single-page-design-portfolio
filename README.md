@@ -69,6 +69,13 @@
       }
   ~~~
 ## 3. Open phone-call based on devise
+This is all it takes in js to open phone-call:
+~~~
+const consultationBtn = document.querySelectorAll('.consultation')
+consultationBtn.forEach(button => {
+  button.onclick = () => (window.location.href = "tel:+1234567890")
+})
+~~~
 ## 4. Features that I didn't know
 Small features that I've learned alongside building project
   1. **':where'** - pseudo-class in CSS is used to simplify and minimize longer CSS selectors in a stylesheet, helping to avoid repetition and reduce code:

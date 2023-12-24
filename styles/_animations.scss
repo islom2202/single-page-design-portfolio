@@ -1,3 +1,5 @@
+@use "./breakpoints" as *;
+
 p,h1,h2,h3{
  animation: reveal linear;
  animation-timeline: view();

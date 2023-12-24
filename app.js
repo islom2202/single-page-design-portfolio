@@ -1,3 +1,4 @@
+// Initialize Swiper
 var swiper = new Swiper(".swiper-container", {
   direction: "horizontal",
   slidesPerView: "auto",
@@ -10,8 +11,8 @@ var swiper = new Swiper(".swiper-container", {
   },
 })
 
+// Open phone-call
 const consultationBtn = document.querySelectorAll('.consultation')
-
 consultationBtn.forEach(button => {
   button.onclick = () => (window.location.href = "tel:+1234567890")
 })
