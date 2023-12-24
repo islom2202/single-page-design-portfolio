@@ -16,7 +16,8 @@ p,h1,h2,h3{
 }
 .amy{
   img{
-    animation: fly-in linear;
+    transform: translateX(-50%);
+    animation: fly-in linear forwards;
     animation-timeline: view();
     animation-range: cover 0% cover 30%;
   }
@@ -40,9 +41,9 @@ p,h1,h2,h3{
     }
   }
   @keyframes fly-in{
-    from{
-      transform: translateX(-50%);
-    }
+    // from{
+    //   transform: translateX(-50%);
+    // }
     to{
       transform: translateX(0%);
     }
