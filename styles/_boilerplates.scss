@@ -1,5 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
+@use "./colors" as *;
+@use "./breakpoints" as *;
+
 
 *{
   font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  list-style: none;
+  border: none;
+  line-height: 110%;
+  transition: 0.2s;
+  scroll-behavior: smooth;
 }
+body{
+  background-color: $body-background;
+  scrollbar-width: 0.1rem;
+  scrollbar-track-color: $purple;
+  &::-webkit-scrollbar{
+    display: block;
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-thumb{
+    background-color: $orange;
+    border-radius: 1rem;
+  }
+}
+$font-sizes: (
+  button: clamp(1.4rem, 2vw, 1.6rem),
+  p: clamp(1.4rem, 2vw, 1.8rem),
+  h1: clamp(3.6rem, 4vw, 5.6rem),
+  h2: clamp(2.6rem, 4vw, 4rem),
+  h3: clamp(2.4rem, 3vw, 3.4rem),
+  h4: 2.4rem
+);
+
+@each $tag, $size in $font-sizes{
+  #{$tag}{
+    font-size: $size;
+  }
+}
+
+button{
+  width: 17.6rem;
+  height: 4.4rem;
+  color: $white;
+  background-color: $black;
+  font-weight: 700;
+  border-radius: 3rem;
+  cursor: pointer;
+    @include responsive($tablet){
+    width: 22.8rem;
+    height: 5.6rem;
+  }
+  &:active{
+    opacity: 0.7;
+  }
+}
+img{
+  user-select: none;
+}
+p{
+  color: $gray;
+  line-height: 140%;
+}
+.visually_hidden{
+  display: none;
+}
+

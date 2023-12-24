@@ -1,11 +1,10 @@
 @use "./breakpoints";
 @use"./boilerplates";
-
-.prev, .next{
-  opacity: 0;
-}
-.parent:hover :where(.prev, .next){
-  opacity: 1;
-}
-
-
+@use "./colors";
+@use "./blocks/header";
+@use "./blocks/design_solutions";
+@use "./blocks/amy";
+@use "./blocks/my_work";
+@use "./blocks/book_me";
+@use "./blocks/footer";
+@use "./animations";

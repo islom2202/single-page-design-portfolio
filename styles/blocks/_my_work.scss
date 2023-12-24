@@ -1,0 +1,61 @@
+@use "../breakpoints" as *;
+@use "../colors" as *;
+// mobile
+.my_work{
+  text-align: center;
+  .swiper-container{
+    overflow-x: hidden;
+    .swiper-wrapper{
+    margin: 5.6rem 0;
+    // max-width: 100%;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    .swiper-slide{
+      width: 27rem;
+      aspect-ratio: 27 / 18;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+    }
+  }
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    // remove swiper's default positon which is absolute 
+    .swiper-button-next,
+    .swiper-button-prev{
+      position: static;
+    }
+    // remove swiper's default arrows
+    .swiper-button-next::after, 
+    .swiper-button-prev::after {
+    content: "";
+    }
+    button{
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    &:hover{
+      background-color: $purple;
+    }
+    } 
+  }
+  }
+
+
+// desktop
+@include responsive($tablet){
+  .my_work{
+    .swiper-container{
+      .swiper-wrapper{
+      .swiper-slide{
+        width: 54rem;
+        aspect-ratio: 54 / 36;
+      }
+    }
+    }
+  }
+}

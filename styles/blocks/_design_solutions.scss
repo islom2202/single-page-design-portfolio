@@ -1,0 +1,100 @@
+@use "../breakpoints" as *;
+@use "../colors" as *;
+@mixin gridify($columns){
+  display: grid;
+  grid-template-columns: $columns;
+  gap: 2.4rem;
+  border-radius: 0.8rem;
+};
+
+// background colors for boxes
+.design_solutions{
+$box-colors:(
+  "ul:first-child": $purple,
+  "ul:nth-child(2) li:nth-child(1)": $orange,
+  "ul:nth-child(2) li:nth-child(2)": $pink,
+  "ul:nth-child(2) li:nth-child(3)": $red,
+  "ul:nth-child(3) li:nth-child(1)": $aqua,
+  "ul:nth-child(3) li:nth-child(2)": $dark-purple
+);
+@each $tag, $value in $box-colors{
+  #{$tag}{
+    background-color: $value;
+  }
+};
+}
+
+// mobile
+.design_solutions{
+  text-align: center;
+  padding: 6.6rem 5% 0 5%;
+  h1{
+    margin-bottom: 2.3rem;
+  }
+  .boxes{
+    @include gridify(1rf);
+    margin-top: 6.4rem;
+    ul{
+      @include gridify(1fr);
+      li{
+        height: 18.2rem;
+        border-radius: 0.8rem;
+        position: relative;
+        img{
+          position: absolute;
+          top: 2.4rem;
+          right: 2.4rem;
+        }
+        h4{
+          position: absolute;
+          bottom: 2.4rem;
+          left: 2.4rem;
+          color: $white;
+        }
+      }
+    }
+    ul:first-child{
+      min-height: 36.4rem;
+      li{
+        height: 100%;
+      }
+    }
+    ul:nth-child(2){
+      @include gridify(repeat(2, 1fr)); 
+      li:last-child{
+        grid-column: span 2;
+      }
+    }
+  }
+}
+// tablet
+@include responsive($tablet){
+  .design_solutions{
+    .boxes{
+    @include gridify(repeat(2, 1fr)); 
+    margin-top: 8rem; 
+    ul:last-child{
+      @include gridify(repeat(2, 1fr)); 
+      grid-column: span 2;
+    }
+  }
+  }
+}
+// desktop
+@include responsive($desktop){
+  .design_solutions{
+    p{
+      padding-inline: 17vw;
+    }
+    padding: 6.6rem 10% 0 10%;
+    .boxes{
+    @include gridify(repeat(3, 1fr));
+    ul:last-child{
+      grid-column: span 1;
+      li{
+        grid-column: span 2;
+      }
+    }
+    }
+  }
+}

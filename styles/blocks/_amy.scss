@@ -1,0 +1,56 @@
+@use "../colors" as *;
+@use "../breakpoints" as *;
+
+// mobile
+.amy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13.6rem 5% 8.8rem 5%;
+  gap: 4rem;
+  text-align: center;
+  img{
+    aspect-ratio: 1/1;
+    width: 30rem;
+  }
+  aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    button{
+      background-color: $red;
+      &:hover{
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+// tablet
+@include responsive($tablet){
+  .amy{
+    flex-direction: row;
+    text-align: start;
+    // overflow-x: hidden;
+    img{
+      width: 36.4rem;
+      margin-left: -8.5rem;
+    }
+    aside{
+      align-items: start;
+    }
+  }
+}
+
+//desktop
+@include responsive($desktop){
+  .amy{
+    gap: 12.5rem;
+    padding-inline: 10%;
+    img{
+      width: 44.5rem;
+      margin: 0;
+    }
+  }
+}

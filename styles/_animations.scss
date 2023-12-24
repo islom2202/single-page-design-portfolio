@@ -1,0 +1,47 @@
+p,h1,h2,h3{
+ animation: reveal linear;
+ animation-timeline: view();
+ animation-range: cover 0% cover 30% ;
+}
+
+// sections
+.design_solutions{
+    ul{
+      animation: scale-down linear;
+      animation-timeline: view();
+      animation-range: cover 40% cover 100%;
+    }
+}
+.amy{
+  img{
+    animation: fly-in linear;
+    animation-timeline: view();
+    animation-range: cover 0% cover 30%;
+  }
+}
+
+  // animations
+  @keyframes reveal{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes scale-down{
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(0.9);
+    }
+  }
+  @keyframes fly-in{
+    from{
+      transform: translateX(-50%);
+    }
+    to{
+      transform: translateX(0%);
+    }
+  }

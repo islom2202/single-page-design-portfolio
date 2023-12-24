@@ -1,0 +1,24 @@
+@use "../breakpoints" as *;
+@use "../colors" as *;
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4.8rem 5% 3.2rem 5%;
+  img{
+    width: 4.8rem;
+  }
+  button:hover{
+    background-color: $purple;
+  }
+}
+
+// desktop
+@include responsive($desktop){
+  footer{
+    padding: 5.6rem 10% 6.4rem 10%;
+    img{
+      width: 6.4rem;
+    }
+  } 
+}

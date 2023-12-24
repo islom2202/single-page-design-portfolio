@@ -3,16 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--SWIPER-->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="./styles-compiled/styles.css">
   <title>Single-page design portfolio</title>
 </head>
 <body>
   <header>
-    <a href="#home">home page</a>
-    <a href="#my_work">my work</a>
+    <img src="./assets/icons/logo.svg" alt="logo" draggable="false">
+    <button class="consultation">Free Consultation</button>
   </header>
   <main>
+    <section class="design_solutions">
+      <h1>Design solutions made easy</h1>
+      <p>With over ten years of experience in various design disciplines, I'm your one-stop shop for your design needs.</p>
+      <div class="boxes">
+        <ul class="box">
+          <li>
+            <img src="assets/images/pattern-graphic-design.svg" alt="graphic-design"  draggable="false">
+            <h4>Graphic Design</h4>
+          </li>
+        </ul>
+        <ul class="box">
+          <li>
+            <img src="/assets/images/pattern-ui-ux.svg" alt="pattern-ui-ux"  draggable="false">
+            <h4>UI/UX</h4>
+          </li>
+          <li>
+            <img src="/assets/images/pattern-apps.svg" alt="pattern-apps"  draggable="false">
+            <h4>Apps</h4>
+          </li>
+          <li>
+            <img src="/assets/images/pattern-illustrations.svg" alt="pattern-illustrations"  draggable="false">
+            <h4>Illustrations</h4>
+          </li>
+        </ul>
+        <ul class="box">
+          <li>
+            <img src="assets/images/pattern-photography.svg" alt="pattern-photography"  draggable="false">
+            <h4>Photography</h4>
+          </li>
+          <li>
+            <img src="assets/images/pattern-motion-graphics.svg" alt="pattern-motion-graphics"  draggable="false">
+            <h4>Motion Graphic</h4>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="amy">
+      <h2 class="visually_hidden">Ammy</h2>
+      <img src="assets/images/image-amy.webp" alt="amy's pic">
+      <aside>
+        <h2>I'm Amy, and I'd love to work on your next project</h2>
+        <p>I love working with others to create beautiful design solutions. I've designed everything from brand illustrations to complete mobile apps. I'm also handy with a camera!</p>
+        <button class="consultation">Free Consultation</button>
+      </aside>
+    </section>
+    <section class="my_work">
+      <h3>My Work</h3>
+      <div class="swiper-container">
+        <ul class="swiper-wrapper">
+          <img src="assets/images/image-slide-1.jpg" class="swiper-slide">
+          <img src="assets/images/image-slide-2.jpg" class="swiper-slide">
+          <img src="assets/images/image-slide-3.jpg" class="swiper-slide">
+          <img src="assets/images/image-slide-4.jpg" class="swiper-slide">
+          <img src="assets/images/image-slide-5.jpg" class="swiper-slide">
+          <img src="assets/images/image-slide-6.webp" class="swiper-slide">
+        </ul>
+        <div class="buttons">
+          <button class="swiper-button-prev" draggable="false">
+            <img src="/assets/icons/icon-arrow-left.svg" alt="icon-arrow-left">
+          </button>
+          <button class="swiper-button-next">
+            <img src="/assets/icons/icon-arrow-right.svg" alt="icon-arrow-right" draggable="false">
+          </button>
+      </div>
+      </div>
+    </section>
+    <section class="book_me">
+        <div class="text">
+          <h2>Book a call with me</h2>
+          <p>I'd love to have a chat to see how I can help you. The best first step is for us to discuss your project during a free consultation. Then we can move forward from there.</p>
+        </div>
+        <button class="consultation">Free Consultation</button>
+    </section>
   </main>
-  <footer>footer</footer>
+  <footer>
+    <img src="./assets/icons/logo.svg" alt="logo" draggable="false">
+    <button>Free Consultation</button>
+  </footer>
+  <!-- Initialize Swiper -->
+<script src="app.js"></script>
 </body>
 </html>

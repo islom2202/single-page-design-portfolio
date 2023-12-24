@@ -1,0 +1,44 @@
+@use "../colors" as *;
+@use "../breakpoints" as *;
+// mobile
+.book_me{
+margin-inline: 5%;
+background-color: $black;
+padding: 4.8rem 2.4rem;
+margin-top: 12rem;
+text-align: center;
+border-radius: 1.5rem;
+*{
+  color: white;
+}
+p{
+  margin: 2.6rem 0;
+  line-height: 2.8rem;
+  letter-spacing: 0.1rem;
+}
+button{
+  background-color: $red;
+  &:hover{
+    background-color: $orange;
+  }
+}
+}
+// tablet
+@include responsive($desktop){
+   .book_me{
+    margin-inline: 10%;
+   }
+}
+// desktop
+@include responsive($desktop){
+  .book_me{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: start;
+    padding: 5.6rem 7.4rem 6.4rem 7.4rem;
+    button{
+      justify-self: end;
+    }
+  }
+}
